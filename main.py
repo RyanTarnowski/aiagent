@@ -6,7 +6,7 @@ load_dotenv()
 api_key = os.environ.get("GEMINI_API_KEY")
 
 if api_key == None:
-    raise Exception("API key now found, check .env GEMINI_API_KEY")
+    raise Exception("API key not found, check .env GEMINI_API_KEY")
 
 client = genai.Client(api_key=api_key)
 
